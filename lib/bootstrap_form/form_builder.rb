@@ -267,13 +267,11 @@ module BootstrapForm
       
       result = false
 
-      if defined? "ActiveRecord::Validations::PresenceValidator"
-        and target_validators.include?(ActiveRecord::Validations::PresenceValidator)
+      if defined? "ActiveRecord::Validations::PresenceValidator" && target_validators.include?(ActiveRecord::Validations::PresenceValidator)
           result = true
       end
       
-      if defined? "ActiveModel::Validations::PresenceValidator"
-        and target_validators.include?(ActiveModel::Validations::PresenceValidator)
+      if defined? "ActiveModel::Validations::PresenceValidator" && target_validators.include?(ActiveModel::Validations::PresenceValidator)
           result = true
       end
       
